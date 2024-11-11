@@ -4,6 +4,7 @@
 
 import requests
 import sys
+import csv
 
 
 def main():
@@ -13,7 +14,7 @@ def main():
     user = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
     todos = 'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(
         user_id)
-    name = requests.get(user).json().get('name')
+    name = requests.get(user).json().get('username')
     request_todo = requests.get(todos).json()
     with open('{}.csv'.format(user_id), 'w+') as file:
         for todo in request_todo:
