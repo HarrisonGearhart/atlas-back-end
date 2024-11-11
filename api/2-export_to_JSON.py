@@ -21,7 +21,7 @@ def main():
     with open('{}.json'.format(user_id), 'w+') as file:
         for todo in request_todo:
             task = {"task": todo.get("title"),
-                    "completed": todo.get("completed", "username": name)}
+                    "completed": todo.get("completed"), "username": name}
             tasks.append(task)
         info = {user_id: tasks}
         file.write(json.dumps(info))
