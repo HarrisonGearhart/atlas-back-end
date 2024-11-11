@@ -21,6 +21,7 @@ def main():
                 user_id, name, todo.get('completed'), todo.get('title'))
             file.write(info)
 
+
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main()
