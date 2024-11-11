@@ -26,6 +26,7 @@ def main():
         info = {user_id: tasks}
         file.write(json.dumps(info))
 
+
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main()
